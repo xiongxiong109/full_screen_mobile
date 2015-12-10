@@ -1,0 +1,16 @@
+.box{
+	width: 50%;
+	height: 50%;/*经过js计算之后,这里的50%将精确地按照设计图的百分比缩放,就不会再有偏差了*/
+	background-color: #c00;
+	position: absolute;
+}
+.square{/*在电脑上,chrome的font-size最小为10px,当再缩小时,使用rem布局的元素在PC上就看不出等比缩放的效果了*/
+	width:8rem;
+	height:8rem;
+	background-color: #00c;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	z-index: 9;
+}
