@@ -1,0 +1,92 @@
+@charset "utf-8";
+.page{
+	background-color: #f7f2de;
+	/*background-image:-webkit-linear-gradient(top,#19c4d8 0%,#19c4d8 26%, #f9f1cd 26%, #f9f1cd 95%, #10b793 95%);*/
+}
+.page-inner{
+	background:#f9f1cd url("../img/common/footer.png") bottom center no-repeat;
+	background-size:100% 5%;
+}
+.ad-title{
+	width: 100%;
+	height: 31%;
+	background:url("../img/common/title-bg.jpg") center center no-repeat;
+	background-size: cover;
+}
+.ad-title img{
+	width: 100%;
+}
+.box-title{
+	top: 10%;
+	left: 0;
+}
+.box-main{
+	width: 100%;
+	height: 35%;
+	top: 45%;
+	background: url("../img/showoff/pack.png") center center no-repeat;
+	background-size:contain;
+}
+.invite-person{
+	display: block;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	font-size: 0.7rem;
+	position: absolute;
+	top:5%;
+	left: 25%;
+	color: #fff;
+}
+.invite-person em{
+	font-style: normal;
+	color: #c00;
+}
+.invite-money{
+	width: 20%;
+	display: block;
+	margin: auto;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: #ff0;
+	position: absolute;
+	top: 44%;
+	left: 39%;
+}
+
+.box-footer{
+	width: 100%;
+	bottom:6%;
+	height: 8%;
+}
+.btn{
+	position: absolute;
+	display: block;
+	width: 45%;
+	height:100%;
+	background-size:100% 200%;
+}
+.btn:active{
+	background-position:100% 100%;
+}
+.btn-android{
+	left: 3%;
+	background-image:url("../img/common/android_sprite.png");
+}
+.btn-ios{
+	right:3%;
+	background-image:url("../img/common/ios_sprite.png");
+}
+#mask{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color:rgba(0,0,0,0.5);
+	display: none;
+}
+#mask img{
+	width: 100%;
+}

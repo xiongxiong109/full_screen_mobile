@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta content="email=no" name="format-detection" />
+	<title>炫耀分享</title>
+	<link rel="stylesheet" type="text/css" href="../../lib/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/showoff.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div id="pageList">
+			<div class="page current">
+				<div class="page-inner">
+					<header class="ad-title">
+						<img src="./img/common/title.png" ondragstart="return false;">
+					</header>
+					<div class="inner-box box-title">
+						<img src="./img/showoff/lufei.png" ondragstart="return false;">
+					</div>
+					<div class="inner-box box-main">
+						<span class="invite-person ellipsis">你的朋友抢到了<em>58</em>元</span>
+						<span class="invite-money ellipsis">520</span>
+					</div>
+					<div class="inner-box box-footer">
+						<a href="javascript:void(0);" class="btn btn-android" ondragstart="return false;"></a>
+						<a href="javascript:void(0);" class="btn btn-ios" ondragstart="return false;"></a>
+					</div>
+					<div id="mask">
+						<img src="./img/open_weixin.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../lib/js/zepto.min.js"></script>
+	<script type="text/javascript" src="../../lib/js/resize.js"></script>
+	<script type="text/javascript" src="../../lib/js/bw.js"></script>
+	<script type="text/javascript">
+		var bw=TestBrowser();
+		document.addEventListener('touchstart',function(){},false);
+		if(bw.weChat){
+			$(".btn").on('click',function(e){
+				e.preventDefault();
+				$("#mask").css({
+					height:$(".page").height(),
+					top:-$(".page-inner").offset().top
+				}).fadeIn();
+				$("#mask").on('click',function(){
+					$(this).fadeOut();
+				});
+			});
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+/*移动端样式重置*/
+@charset "utf-8";
+body,h1,h2,h3,h4,p,ul,ol,li,input,button,textarea,form,a{margin: 0;padding: 0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body{min-height: 100%;height: 100%;font-size: 16px;}
+body{font-family:'Microsoft Yahei','Simsun','Helvetica';  color:#333;background:#fff;-webkit-text-size-adjust: none;margin: auto;}
+h1,h2,h3,h4,h5{font-weight: normal;font-size: 1rem;}
+form{display:inline;}
+ul,ol{list-style:none;}
+a{text-decoration:none;color:#1a1a1a;}
+img{vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;}
+button,input,select,textarea{font-size:1rem; vertical-align:middle;outline:none;}
+textarea{resize:none;}
+.fl{float:left;}.fr{float:right;}
+.ellipsis{ white-space:nowrap; text-overflow:ellipsis; overflow:hidden}
+.break{ word-break:break-all; word-wrap:break-word}
+
+/*全屏样式*/
+.wrapper{/*撑满全屏的顶级容器*/
+	position: relative;
+	margin: auto;
+	height: 100%;
+	background-color: #fff;
+	overflow: hidden;
+}
+#pageList{/*页面ul,提供overflow:hidden与perspective,为li的滚动与3d动画做基础*/
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
+}
+.page{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-size: cover;
+	background-position: center center;
+	-webkit-transform-style: preserve-3d;/*3d动画*/
+	transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;/*3d翻转背部是否可见*/
+	display: none;
+}
+.current{
+	display: block;
+}
+.page-inner{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.inner-box{/*所有盒子用绝对定位*/
+	position: absolute;
+}
+.inner-box img{
+	width: 100%;
+}
+/*页面上滑*/
+.page-move-up{
+	-webkit-animation:moveUp 1s 0.5s ease forwards;
+	animation:moveUp 1s 0.5s ease forwards;
+}
+
+/*animation*/
+@-webkit-keyframes moveUp{
+	to{
+		-webkit-transform:translate3d(0,-100%,0);
+	}
+}
+@keyframes moveUp{
+	to{
+		transform:translate3d(0,-100%,0);
+	}
+}
