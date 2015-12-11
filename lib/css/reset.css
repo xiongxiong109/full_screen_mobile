@@ -49,10 +49,14 @@ textarea{resize:none;}
 .current{
 	display: block;
 }
+.current .page-inner{
+	display: block;
+}
 .page-inner{
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	display: none;
 }
 .inner-box{/*所有盒子用绝对定位*/
 	position: absolute;
@@ -61,11 +65,20 @@ textarea{resize:none;}
 	width: 100%;
 }
 /*页面上滑*/
-.page-move-up{
-	-webkit-animation:moveUp 1s 0.5s ease forwards;
-	animation:moveUp 1s 0.5s ease forwards;
+.page-center-to-up{
+	display:block;
+	-webkit-transform:translate3d(0,0%,0);
+	transform:translate3d(0,0%,0);
+	-webkit-animation:moveUp 0.8s  ease forwards;
+	animation:moveUp 0.8s ease forwards;
 }
-
+.page-down-to-center{
+	display: block;
+	-webkit-transform:translate3d(0,100%,0);
+	transform:translate3d(0,100%,0);
+	-webkit-animation: toCenter 0.8s ease forwards;
+	animation: toCenter 0.8s ease forwards;
+}
 /*animation*/
 @-webkit-keyframes moveUp{
 	to{
@@ -75,5 +88,16 @@ textarea{resize:none;}
 @keyframes moveUp{
 	to{
 		transform:translate3d(0,-100%,0);
+	}
+}
+
+@-webkit-keyframes toCenter{
+	to{
+		-webkit-transform:translate3d(0,0%,0);
+	}
+}
+@keyframes toCenter{
+	to{
+		transform:translate3d(0,0%,0);
 	}
 }
