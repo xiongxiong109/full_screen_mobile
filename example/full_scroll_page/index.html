@@ -9,7 +9,6 @@
 	<meta content="telephone=no" name="format-detection" />
 	<meta content="email=no" name="format-detection" />
 	<link rel="stylesheet" type="text/css" href="../../lib/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="../../lib/css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>全屏h5页面</title>
 </head>
@@ -23,7 +22,7 @@
 			<li class="page" data-disdown="true" data-hasleave="true">
 				<div class="page-inner" id="page-inner-0-0">
 					<div class="inner-box box-0-0">
-						<img src="img/load/1.png" class="ani" data-in="fadeInLeft 2s ease forwards" data-out="fadeOutRight 2s 0.3s ease forwards">
+						<img src="img/load/1.png" class="ani" data-in="fadeInLeft 2s ease both" data-out="fadeOutRight 2s 0.3s ease both">
 					</div>
 				</div>
 			</li>
@@ -66,6 +65,8 @@
 			'./img/load/7.png'
 		];
 		$.preload(imgData);
+		$.audio();
+		$(".ani").hide();//隐藏所有ani元素
 	</script>
 </body>
 </html>
