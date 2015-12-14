@@ -46,10 +46,11 @@ textarea{resize:none;}
 	backface-visibility: hidden;/*3d翻转背部是否可见*/
 	display: none;
 }
-.current{
+.current,.preCurrent{
 	display: block;
 }
-.current .page-inner{
+.current .page-inner,
+.preCurrent .page-inner{
 	display: block;
 }
 .page-inner{
@@ -63,41 +64,4 @@ textarea{resize:none;}
 }
 .inner-box img{
 	width: 100%;
-}
-/*页面上滑*/
-.page-center-to-up{
-	display:block;
-	-webkit-transform:translate3d(0,0%,0);
-	transform:translate3d(0,0%,0);
-	-webkit-animation:moveUp 0.8s  ease forwards;
-	animation:moveUp 0.8s ease forwards;
-}
-.page-down-to-center{
-	display: block;
-	-webkit-transform:translate3d(0,100%,0);
-	transform:translate3d(0,100%,0);
-	-webkit-animation: toCenter 0.8s ease forwards;
-	animation: toCenter 0.8s ease forwards;
-}
-/*animation*/
-@-webkit-keyframes moveUp{
-	to{
-		-webkit-transform:translate3d(0,-100%,0);
-	}
-}
-@keyframes moveUp{
-	to{
-		transform:translate3d(0,-100%,0);
-	}
-}
-
-@-webkit-keyframes toCenter{
-	to{
-		-webkit-transform:translate3d(0,0%,0);
-	}
-}
-@keyframes toCenter{
-	to{
-		transform:translate3d(0,0%,0);
-	}
 }

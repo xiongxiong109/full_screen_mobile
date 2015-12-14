@@ -9,29 +9,32 @@
 	<meta content="telephone=no" name="format-detection" />
 	<meta content="email=no" name="format-detection" />
 	<link rel="stylesheet" type="text/css" href="../../lib/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../lib/css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>全屏h5页面</title>
 </head>
 <body>
 	<div class="wrapper">
 		<ul id="pageList">
-			<li class="page current">
+			<li class="page current" data-disdown="true" data-hasleave="true">
 				<div class="page-inner" id="page-inner-0-0">
-					<p>移动端全屏H5页面</p>
+					<p class="ani" data-in="fadeInDown 1s forwards" data-out="fadeOutUp 1s forwards">移动端全屏H5页面</p>
+					<p class="ani" data-in="fadeInUp 1s 0.5s forwards" data-out="fadeOutDown 1s forwards">是的撒打算的</p>
+				</div>
+			</li>
+			<li class="page" data-hasleave="true">
+				<div class="page-inner" id="page-inner-0-1" >
+					<p class="ani" data-in="rotateInDownLeft 1s forwards">页面滚动</p>
+					<p class="ani" data-out="fadeOutLeft 1s forwards">页面再次滚动</p>
 				</div>
 			</li>
 			<li class="page">
-				<div class="page-inner" id="page-inner-0-1">
+				<div class="page-inner" id="page-inner-0-2">
 					<p>页面滚动</p>
 				</div>
 			</li>
-			<li class="page">
-				<div class="page-inner" id="page-inner-0-1">
-					<p>页面滚动</p>
-				</div>
-			</li>
-			<li class="page">
-				<div class="page-inner" id="page-inner-0-1">
+			<li class="page" data-disup="true">
+				<div class="page-inner" id="page-inner-0-3">
 					<p>页面滚动</p>
 				</div>
 			</li>
