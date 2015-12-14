@@ -91,3 +91,22 @@ textarea{resize:none;}
 	-webkit-transform: translate3d(0,-50%,0);
 	transform: translate3d(0,-50%,0);
 }
+
+/*音乐盒子*/
+#music-box{
+	position: absolute;
+	top:5%;
+	right:5%;
+	z-index: 9;
+	width:2rem;
+	height:2rem;
+	background: url("../img/music.gif") top right no-repeat;
+	background-size:100%;
+}
+.music{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url("../img/music_off.png") center center no-repeat;
+	background-size:60%;
+}
