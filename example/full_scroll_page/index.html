@@ -16,34 +16,55 @@
 <body>
 	<div class="wrapper">
 		<ul id="pageList">
-			<li class="page current" data-disdown="true" data-hasleave="true">
+			<li class="page current preload">
+				<canvas id="pre"></canvas>
+				<span id="preNum">0%</span>
+			</li>
+			<li class="page" data-disdown="true" data-hasleave="true">
 				<div class="page-inner" id="page-inner-0-0">
-					<p class="ani" data-in="fadeInDown 1s forwards" data-out="fadeOutUp 1s forwards">移动端全屏H5页面</p>
-					<p class="ani" data-in="fadeInUp 1s 0.5s forwards" data-out="fadeOutDown 1s forwards">是的撒打算的</p>
+					<div class="inner-box box-0-0">
+						<img src="img/load/1.png" class="ani" data-in="fadeInLeft 2s ease forwards" data-out="fadeOutRight 2s 0.3s ease forwards">
+					</div>
 				</div>
 			</li>
-			<li class="page" data-hasleave="true">
+			<li class="page">
 				<div class="page-inner" id="page-inner-0-1" >
-					<p class="ani" data-in="rotateInDownLeft 1s forwards">页面滚动</p>
-					<p class="ani" data-out="fadeOutLeft 1s forwards">页面再次滚动</p>
+					
 				</div>
 			</li>
 			<li class="page">
 				<div class="page-inner" id="page-inner-0-2">
-					<p>页面滚动</p>
+
 				</div>
 			</li>
 			<li class="page" data-disup="true">
 				<div class="page-inner" id="page-inner-0-3">
-					<p>页面滚动</p>
+
 				</div>
 			</li>
 		</ul>
 	</div>
 	<script type="text/javascript" src="../../lib/js/zepto.min.js"></script>
+	<script type="text/javascript" src="../../lib/js/preload.js"></script>
 	<script type="text/javascript" src="../../lib/js/resize.js"></script>
 	<script type="text/javascript" src="../../lib/js/bw.js"></script>
 	<script type="text/javascript" src="../../lib/js/swiper.js"></script>
 	<script type="text/javascript" src="../../lib/js/scroll.js"></script>
+	<script type="text/javascript">
+		var imgData=[
+			'./img/arrow.png',
+			'./img/loading.gif',
+			'./img/music.gif',
+			'./img/music_off.png',
+			'./img/load/1.png',
+			'./img/load/2.png',
+			'./img/load/3.png',
+			'./img/load/4.png',
+			'./img/load/5.png',
+			'./img/load/6.png',
+			'./img/load/7.png',
+		];
+		$.preload(imgData);
+	</script>
 </body>
 </html>
