@@ -115,7 +115,19 @@ textarea{resize:none;}
 	background: url("../img/music_off.png") center center no-repeat;
 	background-size:60%;
 }
-
+#arrow{
+	position: absolute;
+	z-index: 9;
+	width: 6%;
+	height: 6%;
+	left: 47%;
+	bottom: 5%;
+}
+#arrow img{
+	width: 100%;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
 /*animate*/
 .rotate{
 	-webkit-animation: rotate 2s linear infinite;
@@ -129,5 +141,22 @@ textarea{resize:none;}
 @keyframes rotate{
 	to{
 		transform:rotateZ(360deg);
+	}
+}
+
+.fadeToUp{
+	-webkit-animation: fadeToUp 2s ease infinite;
+	animation: fadeToUp 2s ease infinite;
+}
+@-webkit-keyframes fadeToUp{
+	to{
+		-webkit-transform:translate3d(0,-100%,0);
+		opacity: 0.5;
+	}
+}
+@keyframes fadeToUp{
+	to{
+		transform:translate3d(0,-10%,0);
+		opacity: 0.5;
 	}
 }
