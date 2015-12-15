@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta content="email=no" name="format-detection" />
+	<link rel="stylesheet" type="text/css" href="../../lib/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../lib/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>miaov打怪</title>
+</head>
+<body>
+	<div class="wrapper">
+		<ul id="pageList">
+			<li class="page preload current">
+				<canvas id="pre"></canvas>
+				<span id="preNum">0%</span>
+			</li>
+			<li class="page" data-disdown="true" data-hasleave="true">
+				<div class="page-inner">
+					<div class="inner-box circle ani" data-in="circleIn 0.5s ease both" data-out="circleOut 0.5s ease both"></div>
+					<div class="inner-box starLine ani" data-in="fadeIn 0.5s 0.3s linear both" data-out="fadeOut 0.3s 0.3s linear both">
+						<img src="img/starLine.png">
+					</div>
+					<div class="inner-box rocket ani" data-in="rocketIn 0.3s 0.9s linear both" data-out="rocketOut 0.3s 0.9s both">
+						<img src="img/rocket.png">
+					</div>
+					<div class="inner-box thanks ani" data-in="fadeInDown 0.3s 0.6s linear both" data-out="fadeOut 0.2s 0.6s linear both">
+						<img src="img/thanks.png">
+					</div>
+					<div class="inner-box miaov ani" data-in="zoomIn 0.2s 1.3s linear both" data-out="zoomOut 0.2s 0.8s linear both">
+						<img src="img/miaov.png">
+					</div>
+					<div class="inner-box with-u ani" data-in="fadeInUp 0.3s 0.6s linear both" data-out="fadeOutDown 0.3s 0.6s linear both">
+						<img src="img/widthyou.png">
+					</div>
+					<div class="inner-box star-small ani" data-in="zoomIn 0.3s linear both">
+						<img src="img/starSmall.png">
+					</div>
+				</div>
+			</li>
+			<li class="page" id="p2" data-disup="true" data-hasleave="true">
+				<div class="page-inner">
+					<div class="inner-box circle2 ani" data-in="circle2In 0.4s ease both" data-out="circle2Out 0.4s ease both"></div>
+					<div class="inner-box rocket2 ani" data-in="rotateInDownRight 0.3s 1.2s ease both" data-out="rocket2Out 0.3s 0.8s linear both">
+						<img src="img/rocket2.png">
+					</div>
+					<div class="inner-box light-house ani" data-in="rotateInDownLeft 0.3s 1s ease both" data-out="rotateOutDownRight 0.3s 0.6s ease both">
+						<img src="img/lighthouse.png">
+					</div>
+					<div class="inner-box planet ani" data-in="fadeIn 0.5s 0.1s linear both">
+						<img src="img/planet.png">
+					</div>
+					<div class="inner-box planet2 ani" data-in="fadeIn 0.5s 0.2s linear both">
+						<img src="img/planet2.png">
+					</div>
+					<div class="inner-box planet3 ani" data-in="fadeIn 0.5s 0.3s linear both">
+						<img src="img/planet3.png">
+					</div>
+					<div class="inner-box planet4 ani" data-in="fadeIn 0.5s 0.4s linear both">
+						<img src="img/planet4.png">
+					</div>
+					<div class="inner-box sun ani" data-in="bounceIn 0.4s 0.6s linear both">
+						<img src="img/sun.png">
+					</div>
+					<div class="inner-box pirate ani" data-in="bounceInLeft 0.3s 0.8s linear both">
+						<img src="img/pirate.png">
+					</div>
+					<div class="inner-box text1 ani" data-in="fadeInDown 0.5s 0.6s ease both">
+						<img src="img/text1.png">
+					</div>
+					<div class="inner-box human ani" data-in="zoomIn 0.3s 0.4s linear both" data-out="scaleOut 0.3s 1s linear both">
+						<img src="img/human.png">
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div id="music-box">
+			<div class="music"></div>
+			<audio src="./audio/bg.mp3" preload loop autoplay="autoplay" id="audio"></audio>
+		</div>
+		<div id="arrow">
+			<img src="img/arrow2.png" class="fadeToUp">
+		</div>
+	</div>
+	<script type="text/javascript" src="../../dist/js/lib.min.js"></script>
+	<script type="text/javascript">
+		var imgData=[
+			'img/human.png',
+			'img/human2.png',
+			'img/human3.png',
+			'img/human4.png',
+			'img/human5.png',
+			'img/human6.png'
+		];
+		$.preload(imgData);
+		$.audio();
+		$(".ani").hide();//隐藏所有ani元素
+	</script>
+</body>
+</html>
