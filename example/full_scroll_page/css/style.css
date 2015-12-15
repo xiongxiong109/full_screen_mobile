@@ -2,6 +2,10 @@
 .page{
 	background-image:url("../img/load/3.png");
 }
+.page.preload{
+	background: #fff;
+	z-index: 99;
+}
 .page-inner{
 	background:url("../img/load/3.png") center center no-repeat;
 	background-size: cover;
