@@ -249,7 +249,9 @@ $(function(){
 				'animation':'',
 				'-webkit-animation':''
 			}).hide();
-			$(this)[0].className='page';
+			setTimeout(function(){
+				$(".current")[0].className='page';
+			},50);
 		});
 
 		$(".preCurrent")
@@ -257,9 +259,12 @@ $(function(){
 			if($(this).data('disup')){
 				$("#arrow").hide();
 			}
-			playAnimate($(this),'in');
-			$(this)[0].className='page current';
-			isSwipe=false;
+			playAnimate($(this),'in',function(){
+				isSwipe=false;
+				setTimeout(function(){
+					$(".preCurrent")[0].className='page current';
+				},50);
+			});
 		});
 
 		/*
